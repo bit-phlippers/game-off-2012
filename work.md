@@ -5,7 +5,6 @@
 * stairs
 * front & side walls
 * front & side doorways
-
 * filing cabinet
 * fire aminatun
 * RANDOM LAB EQUIP!!!
