@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="25" height="25" tilewidth="64" tileheight="64">
  <properties>
-  <property name="background_color" value="#ff0"/>
+  <property name="background_color" value="#ccc"/>
  </properties>
  <tileset firstgid="1" name="dumb-tiles" tilewidth="64" tileheight="64">
   <image source="../imgz/dumb-tiles.png" width="512" height="128"/>
