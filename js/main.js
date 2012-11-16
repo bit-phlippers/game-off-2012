@@ -11,6 +11,12 @@ var g_resources = [
     name: "map01",
     type: "tmx",
     src:  "maps/map01.tmx"
+},
+// adding character
+{
+    name: "you",
+    type: "image",
+    src:  "imgz/you.png"
 }
 ];
 
@@ -37,6 +43,9 @@ var jsApp = {
         // set all resources to be loaded
         me.loader.preload(g_resources);
 
+        // kill the gravity!!
+        me.sys.gravity = 0
+
         // load everything & display a loading screen
         me.state.change(me.state.LOADING);
     },
@@ -49,6 +58,15 @@ var jsApp = {
     loaded: function() {
         // set the "Play/Ingame" Screen Object
         me.state.set(me.state.PLAY, new PlayScreen());
+
+        // add player
+        me.entityPool.add("scientist", PlayerEntity);
+
+        // enable the keyboard
+        me.input.bindKey(me.input.KEY.LEFT,  "left");
+        me.input.bindKey(me.input.KEY.RIGHT, "right");
+        me.input.bindKey(me.input.KEY.UP,    "up");
+        me.input.bindKey(me.input.KEY.DOWN,  "down");
 
         // start the game
         me.state.change(me.state.PLAY);
