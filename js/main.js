@@ -3,10 +3,15 @@
 
 // game resources
 var g_resources = [
+// tiles n map
 {
     name: "dumb-tiles",
     type: "image",
     src:  "imgz/dumb-tiles.png"
+}, {
+    name: "collision",
+    type: "image",
+    src:  "imgz/collision.png"
 }, {
     name: "map01",
     type: "tmx",
@@ -17,6 +22,12 @@ var g_resources = [
     name: "you",
     type: "image",
     src:  "imgz/you.png"
+},
+// adding ned
+{
+    name: "ned",
+    type: "image",
+    src:  "imgz/ned.png"
 }
 ];
 
@@ -61,6 +72,7 @@ var jsApp = {
 
         // add player
         me.entityPool.add("scientist", PlayerEntity);
+        me.entityPool.add("ned", NedEntity)
 
         // enable the keyboard
         me.input.bindKey(me.input.KEY.LEFT,  "left");
